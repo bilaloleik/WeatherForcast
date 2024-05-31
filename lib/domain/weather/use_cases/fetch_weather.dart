@@ -8,7 +8,7 @@ class FetchWeatherUseCase {
   Future<Weather> call(String city) async {
     try {
       final weather = await _weatherRepository.fetchWeather(city);
-      _weatherRepository.setCachedWeather(city, weather);
+      await _weatherRepository.setCachedWeather(city, weather);
       return weather;
     } catch (e) {
       final weather = await _weatherRepository.getCachedWeather(city);
