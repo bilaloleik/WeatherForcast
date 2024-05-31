@@ -1,0 +1,14 @@
+# Specify Dart as the language for all .dart files
+*.dart linguist-language=Dart
+
+# Mark Flutter-specific directories and files to be recognized appropriately
+lib/* linguist-language=Dart
+test/* linguist-language=Dart
+bin/* linguist-language=Dart
+example/* linguist-language=Dart
+
+# Ignore generated files and other non-Dart files from language statistics
+android/* linguist-vendored
+ios/* linguist-vendored
+web/* linguist-vendored
+build/* linguist-vendored
